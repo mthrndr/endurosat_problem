@@ -6,4 +6,4 @@ tests: FORCE
 
 deploy: tests
 		git commit -a
-		git push origin staging
+		git push origin main
