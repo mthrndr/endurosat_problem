@@ -1,5 +1,7 @@
 import './App.css';
+
 import ParameterDisplay from './components/ParameterDisplay';
+import NotificationsPanel from './components/NotificationsPanel';
 
 function App() {
   return (
