@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import PowerContext from '../PowerContext';
+
+function connectionButton(pos, toggleConnection){
+  return(
+    <button onClick={() => {
+      toggleConnection(pos);
+      }}
+    >
+      {`Toggle Connection on pack ${pos}`}
+    </button>
+  );
+}
+
+function getCommandOptions(connected, toggleConnection){
+  let Commands = [];
+    for(let pos in connected){
+      Commands.push(connectionButton(pos, toggleConnection));
+    }
+  return Commands;
+};
 
 function CommandPanel() {
+  const {power, toggleConnection} = useContext(PowerContext);
   return (
-    <h3>
-      I am the command panel
-    </h3>
+    <div className="panel">
+      <h3>
+        Command Panel
+      </h3>
+      {getCommandOptions(power.connected, toggleConnection)}
+    </div>
   );
 }
 

@@ -25,7 +25,7 @@ function App() {
   return (
     <PowerContextProvider>
       <div className="App">
-        test
+        Satellite Information
         <ControlPanel />
       </div>
     </PowerContextProvider>

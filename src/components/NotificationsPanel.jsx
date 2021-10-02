@@ -1,26 +1,34 @@
 import React, { useContext } from 'react';
 import PowerContext from '../PowerContext';
 
-function lowVoltageAlert(){
+function disconnectedAlert(pos){
   return(
     <div className="alert">
-      Low voltage!
+      {`Rack ${pos} has been disconnected!`}
     </div>
   );
 }
 
-function highCurrentAlert(){
+function lowVoltageAlert(pos){
   return(
     <div className="alert">
-      High current!
+      {`Low voltage on rack ${pos}!`}
     </div>
   );
 }
 
-function veryHighCurrentAlert(){
+function highCurrentAlert(pos){
   return(
     <div className="alert">
-      Very high current!
+      {`High current on rack ${pos}!`}
+    </div>
+  );
+}
+
+function veryHighCurrentAlert(pos){
+  return(
+    <div className="alert">
+      {`Very high current on rack ${pos}!`}
     </div>
   );
 }
@@ -30,12 +38,16 @@ function getNotifications(power){
   if (power){
     for (let pos in power.voltage){
       if (power.voltage[pos] < 18){
-        Notifications.push(lowVoltageAlert());
+        Notifications.push(lowVoltageAlert(pos));
       }
-      if (power.current[pos] > 3){
-        Notifications.push(veryHighCurrentAlert());
-      } else if (power.current[pos] > 2.5){
-        Notifications.push(highCurrentAlert());
+      if (power.connected[pos]){
+        if (power.current[pos] > 3){
+          Notifications.push(veryHighCurrentAlert(pos));
+        } else if (power.current[pos] > 2.5){
+          Notifications.push(highCurrentAlert(pos));
+        }
+      } else {
+        Notifications.push(disconnectedAlert(pos));
       }
     }
   }

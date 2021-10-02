@@ -6,7 +6,7 @@ function ParameterDisplay({type, id}) {
   return (
     <>
       <h3>
-        {'I am a parameter: '}
+        {`Displaying ${type} on rack ${id}`}
       </h3>
       <p>
         {power[type][id]}
