@@ -2,6 +2,7 @@ import './App.css';
 
 import ParameterDisplay from './components/ParameterDisplay';
 import NotificationsPanel from './components/NotificationsPanel';
+import CommandPanel from './components/CommandPanel';
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <ParameterDisplay />
         <ParameterDisplay />
         <ParameterDisplay />
+        <CommandPanel />
+        <NotificationsPanel />
       </header>
     </div>
   );
