@@ -15,7 +15,7 @@ it("renders without crashing", () =>{
         <PowerContextProvider>
           <ParameterDisplay type='voltage' id='0' />
         </PowerContextProvider>
-    ,div );
+    , div);
     });
     ReactDOM.unmountComponentAtNode(div);
     }
