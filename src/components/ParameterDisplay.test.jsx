@@ -13,7 +13,7 @@ it("renders without crashing", () =>{
     act(() => {
       ReactDOM.render(
         <PowerContextProvider>
-          <ParameterDisplay />
+          <ParameterDisplay type='voltage' id='0' />
         </PowerContextProvider>
     ,div );
     });

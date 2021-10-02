@@ -1,13 +1,17 @@
 import React, { useContext } from 'react';
 import PowerContext from '../PowerContext';
 
-function ParameterDisplay() {
+function ParameterDisplay({type, id}) {
   const { power } = useContext(PowerContext);
   return (
-    <h3>
-      {'I am a parameter: '}
-    { power.voltage[0] }
-    </h3>
+    <>
+      <h3>
+        {'I am a parameter: '}
+      </h3>
+      <p>
+        {power[type][id]}
+      </p> 
+    </>
   );
 }
 

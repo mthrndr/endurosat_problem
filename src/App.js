@@ -9,10 +9,10 @@ import { PowerContextProvider } from './PowerContext';
 function ControlPanel () {
   return(
     <PowerContextProvider>
-      <ParameterDisplay />
-      <ParameterDisplay />
-      <ParameterDisplay />
-      <ParameterDisplay />
+      <ParameterDisplay type='voltage' id='0'/>
+      <ParameterDisplay type='voltage' id='1'/>
+      <ParameterDisplay type='current' id='0'/>
+      <ParameterDisplay type ='current' id='1'/>
       <CommandPanel />
       <NotificationsPanel />
     </PowerContextProvider>

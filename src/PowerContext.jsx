@@ -4,8 +4,8 @@ const PowerContext = createContext('');
 
 export function PowerContextProvider ({children}){
   const [power, setPower] = useState({
-    voltage: [0,0],
-    current: [0,0],
+    voltage: [1,2],
+    current: [3,4],
   });
   return (
     <PowerContext.Provider value={{power}}>
