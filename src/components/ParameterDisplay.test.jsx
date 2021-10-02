@@ -4,13 +4,18 @@ import { act } from 'react-dom/test-utils';
 import { render, cleanup } from '@testing-library/react';
 
 import ParameterDisplay from './ParameterDisplay';
+import { PowerContextProvider } from '../PowerContext';
 
 afterEach(cleanup);
 
 it("renders without crashing", () =>{
     const div = document.createElement("div");
     act(() => {
-      ReactDOM.render(<ParameterDisplay />, div);
+      ReactDOM.render(
+        <PowerContextProvider>
+          <ParameterDisplay />
+        </PowerContextProvider>
+    ,div );
     });
     ReactDOM.unmountComponentAtNode(div);
     }
