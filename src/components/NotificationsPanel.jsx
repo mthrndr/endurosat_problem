@@ -57,11 +57,13 @@ function getNotifications(power){
 function NotificationsPanel() {
   const {power} = useContext(PowerContext);
   return (
-    <div className="Notifications_Panel">
-      <h3>
-        Notifications
-      </h3>
-      {getNotifications(power)}
+    <div className="notifications_panel">
+      <div className="notifications_inner">
+        <h3>
+          Notifications
+        </h3>
+        {getNotifications(power)}
+      </div>
     </div>
   );
 }

@@ -4,14 +4,11 @@ import PowerContext from '../PowerContext';
 function ParameterDisplay({type, id}) {
   const {power} = useContext(PowerContext);
   return (
-    <>
-      <h3>
-        {`Displaying ${type} on rack ${id}`}
+    <div className='parameter_display'>
+      <h3 className='parameter_inner'>
+        {`Displaying ${type} on rack ${id}: ${power[type][id]}`}
       </h3>
-      <p>
-        {power[type][id]}
-      </p> 
-    </>
+    </div>
   );
 }
 

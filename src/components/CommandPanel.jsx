@@ -23,11 +23,13 @@ function getCommandOptions(connected, toggleConnection){
 function CommandPanel() {
   const {power, toggleConnection} = useContext(PowerContext);
   return (
-    <div className="panel">
-      <h3>
-        Command Panel
-      </h3>
-      {getCommandOptions(power.connected, toggleConnection)}
+    <div className="command_panel">
+      <div className="command_inner">
+        <h3>
+          Command Panel
+        </h3>
+        {getCommandOptions(power.connected, toggleConnection)}
+      </div>
     </div>
   );
 }

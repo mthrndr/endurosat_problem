@@ -10,7 +10,7 @@ import { PowerContextProvider } from './PowerContext';
 function ControlPanel () {
 
   return(
-    <div>
+    <div className="control_panel">
       <ParameterDisplay type='voltage' id='0'/>
       <ParameterDisplay type='voltage' id='1'/>
       <ParameterDisplay type='current' id='0'/>
