@@ -3,7 +3,7 @@ import PowerContext from '../PowerContext';
 
 function disconnectedAlert(pos){
   return(
-    <div className="alert">
+    <div className="disconnected_alert">
       {`Rack ${pos} has been disconnected!`}
     </div>
   );
@@ -11,7 +11,7 @@ function disconnectedAlert(pos){
 
 function lowVoltageAlert(pos){
   return(
-    <div className="alert">
+    <div className="voltage_alert">
       {`Low voltage on rack ${pos}!`}
     </div>
   );
@@ -19,7 +19,7 @@ function lowVoltageAlert(pos){
 
 function highCurrentAlert(pos){
   return(
-    <div className="alert">
+    <div className="current_alert">
       {`High current on rack ${pos}!`}
     </div>
   );
@@ -27,7 +27,7 @@ function highCurrentAlert(pos){
 
 function veryHighCurrentAlert(pos){
   return(
-    <div className="alert">
+    <div className="current_alert">
       {`Very high current on rack ${pos}!`}
     </div>
   );

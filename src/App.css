@@ -1,5 +1,14 @@
 .App {
+  height: 100vh;
   text-align: center;
+  background-color: purple;
+}
+
+.title{
+  margin: 0;
+  padding: 10px;
+  background-color: grey;
+  color: white;
 }
 
 .control_panel{
@@ -21,7 +30,8 @@
 .parameter_inner{
   border-style: solid;
   border-width: 1px;
-  border-radius: 3px;
+  border-radius: 5px;
+  background-color: lightgrey;
 }
 
 .command_panel{
@@ -35,7 +45,8 @@
 .command_inner{
   border-style: solid;
   border-width: 1px;
-  border-radius: 3px;
+  border-radius: 5px;
+  background-color: lightgrey;
 }
 
 .notifications_panel{
@@ -49,5 +60,18 @@
 .notifications_inner{
   border-style: solid;
   border-width: 1px;
-  border-radius: 3px;
+  border-radius: 5px;
+  background-color: lightgrey;
+}
+
+.voltage_alert{
+  color: red;
+}
+
+.current_alert{
+  color: yellow;
+}
+
+.disconnected_alert{
+  color: blue;
 }

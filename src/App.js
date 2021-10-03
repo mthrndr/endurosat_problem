@@ -12,8 +12,8 @@ function ControlPanel () {
   return(
     <div className="control_panel">
       <ParameterDisplay type='voltage' id='0'/>
-      <ParameterDisplay type='voltage' id='1'/>
       <ParameterDisplay type='current' id='0'/>
+      <ParameterDisplay type='voltage' id='1'/>
       <ParameterDisplay type ='current' id='1'/>
       <CommandPanel />
       <NotificationsPanel />
@@ -25,7 +25,9 @@ function App() {
   return (
     <PowerContextProvider>
       <div className="App">
-        Satellite Information
+        <h1 className="title">
+          Satellite Information
+        </h1>
         <ControlPanel />
       </div>
     </PowerContextProvider>
